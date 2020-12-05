@@ -1,6 +1,7 @@
 package Gamer;
 
-public abstract class Playerobject implements Playerable {
+public abstract class Playerobject implements Playerable
+{
     private Position objectposition;
     private String objectname;
 
@@ -10,51 +11,75 @@ public abstract class Playerobject implements Playerable {
         this.objectname=objectname;
     }
     @Override
-    public String GetCors() {
+    public String GetCors()
+    {
         return objectposition.GeneratePosStr();
     }
 
-
     @Override
-    public void ChangePos(int newx, int newy) {
+    public void ChangePos(int newx, int newy)
+    {
         this.objectposition.setPosX(newx);
         this.objectposition.setPosY(newy);
     }
 
     @Override
-    public void MoveDown() {
+    public void MoveDown()
+    {
         if(NotAWall())
         {
             this.objectposition.setPosY(this.objectposition.getPosY() - 1);
+            System.out.print("пошёл вниз");
         }
     }
 
     @Override
-    public void MoveLeft() {
-        if(NotAWall()) {
+    public void MoveLeft()
+    {
+        if(NotAWall())
+        {
             this.objectposition.setPosX(this.objectposition.getPosX() - 1);
+            System.out.print("пошёл налево");
         }
-
     }
 
     @Override
-    public void MoveUp() {
+    public void MoveUp()
+    {
         if(NotAWall())
         {
             this.objectposition.setPosY(this.objectposition.getPosY() + 1);
+            System.out.print("пошёл вниз");
         }
     }
 
     @Override
-    public void MoveRight() {
+    public void MoveRight()
+    {
         if(NotAWall())
         {
-            this.objectposition.setPosX(this.objectposition.getPosX() +1);
+            this.objectposition.setPosX(this.objectposition.getPosX() + 1);
+            System.out.print("пошёл направо");
         }
+    }
+
+    @Override
+    public void MoveStop()
+    {
+        if(NotAWall())
+        {
+            System.out.print("пропустил ход");
+        }
+    }
+
+    @Override
+    public String BotMove()
+    {
+        return objectposition.toString();
     }
 
     public boolean NotAWall()
     {
-        return  true;
+        return true;
     }
 }

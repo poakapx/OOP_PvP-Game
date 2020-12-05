@@ -1,9 +1,9 @@
 package Gamer;
 
-public class Player extends Playerobject {
-
-    public Player(Position pos,String objectnam)
+public class Player extends Playerobject
+{
+    public Player(Position pos, String objectname)
     {
-        super(pos,objectnam);
+        super(pos, objectname);
     }
 }

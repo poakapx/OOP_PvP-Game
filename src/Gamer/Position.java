@@ -9,36 +9,34 @@ public class Position
         posY=0;
     }
 
-
     public Position(int x, int y)
     {
         this.posX=x;
         this.posY=y;
-
     }
 
-    public int getPosX() {
+    public int getPosX()
+    {
         return posX;
     }
 
-    public int getPosY() {
+    public int getPosY()
+    {
         return posY;
     }
 
-    public void setPosX(int posX) {
+    public void setPosX(int posX)
+    {
         this.posX = posX;
     }
 
-    public void setPosY(int posY) {
+    public void setPosY(int posY)
+    {
         this.posY = posY;
     }
 
-
     public String GeneratePosStr()
     {
-        return "Position{" +
-            "posX=" + posX +
-            ", posY=" + posY +
-            '}';
+        return "pos-X = " + posX + ",\tpos-Y = " + posY;
     }
 }
